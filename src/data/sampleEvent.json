@@ -1,0 +1,92 @@
+[
+  {
+    "id": 104791976,
+    "status": "Active",
+    "locale": "en_US",
+    "name": "Chicago White Sox at Chicago Cubs Spring Training",
+    "description": "Buy and Sell Chicago White Sox vs Chicago Cubs Spring Training Tickets for March 23 at Sloan Park in Mesa, AZ at StubHub! Tickets are 100% guaranteed by FanProtect.",
+    "webURI": "chicago-cubs-mesa-tickets-3-23-2021/event/104791976/",
+    "eventDateLocal": "2021-03-23T13:05:00-0700",
+    "eventDateUTC": "2021-03-23T20:05:00+0000",
+    "createdDate": "2021-02-12T18:40:46+0000",
+    "lastUpdatedDate": "2021-02-17T18:51:23+0000",
+    "hideEventDate": false,
+    "hideEventTime": false,
+    "venue": {
+      "id": 215606,
+      "name": "Sloan Park",
+      "city": "Mesa",
+      "state": "AZ",
+      "postalCode": "85201",
+      "country": "US",
+      "venueConfigId": 603587,
+      "venueConfigName": "Baseball - Cubs - Spring Training - Dynamic",
+      "latitude": 33.431236,
+      "longitude": -111.881685
+    },
+    "timezone": "MST",
+    "performers": [
+      {
+        "id": 5644,
+        "name": "Chicago Cubs"
+      },
+      {
+        "id": 5645,
+        "name": "Chicago White Sox",
+        "role": "AWAY_TEAM"
+      }
+    ],
+    "ancestors": {
+      "categories": [
+        {
+          "id": 28,
+          "name": "Sports"
+        },
+        {
+          "id": 29,
+          "name": "Baseball"
+        }
+      ],
+      "groupings": [
+        {
+          "id": 81,
+          "name": "MLB"
+        },
+        {
+          "id": 44510,
+          "name": "MLB Spring Training"
+        },
+        {
+          "id": 137438,
+          "name": "Cactus League Spring Training"
+        },
+        {
+          "id": 44515,
+          "name": "Chicago Cubs Spring Training"
+        }
+      ],
+      "performers": [
+        {
+          "id": 5644,
+          "name": "Chicago Cubs"
+        }
+      ]
+    },
+    "categoriesCollection": {
+      "categories": [
+        {
+          "id": 29,
+          "name": "Baseball"
+        }
+      ]
+    },
+    "currencyCode": "USD",
+    "ticketInfo": {
+      "minPrice": 136.07,
+      "minListPrice": 109,
+      "maxListPrice": 350,
+      "totalTickets": 98,
+      "totalListings": 36
+    }
+  }
+]
