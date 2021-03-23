@@ -195,7 +195,8 @@ class DiscordClient extends Client {
     try {
       const events = await getEventById(event.id);
       if (!events) throw new Error("Event not found");
-      const { totalTickets, totalListings } = events[0].ticketInfo;
+      const currentEvent = events[0];
+      const { totalTickets, totalListings } = currentEvent.ticketInfo;
       if (totalListings !== event.listings) {
         await event.discordSalesChannel.send(
           "Total number of listings available " + totalListings
@@ -204,6 +205,8 @@ class DiscordClient extends Client {
           "Total number of tickets available " + totalTickets
         );
       }
+      event.setListings(totalListings);
+      event.setTickets(totalTickets);
     } catch (err) {
       console.log("CHECK FOR EVENT: ", err?.response?.data);
     }
@@ -264,10 +267,11 @@ class DiscordClient extends Client {
 
           if (isListingIdNotPresent) {
             const row = listing.row || listing.products?.[0].row!;
-            const seats = listing.products?.reduce((acc, p) => {
-              acc += p.seat || "";
-              return acc;
-            }, "");
+            const seats =
+              listing.products?.reduce((acc, p) => {
+                acc += parseInt(p.seat || "0");
+                return acc;
+              }, 0) || "Not available";
             await event.discordSalesChannel.send(`
                 ${getDateTime()}: ***Listing no longer available (sold or revoked)**:
                  sectionName = ${listing.sectionName}
