@@ -267,10 +267,11 @@ class DiscordClient extends Client {
 
           if (isListingIdNotPresent) {
             const row = listing.row || listing.products?.[0].row!;
-            const seats = listing.products?.reduce((acc, p) => {
-              acc += p.seat || "";
-              return acc;
-            }, "");
+            const seats =
+              listing.products?.reduce((acc, p) => {
+                acc += parseInt(p.seat || "0");
+                return acc;
+              }, 0) || "Not available";
             await event.discordSalesChannel.send(`
                 ${getDateTime()}: ***Listing no longer available (sold or revoked)**:
                  sectionName = ${listing.sectionName}
