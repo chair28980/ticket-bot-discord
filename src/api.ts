@@ -83,13 +83,14 @@ export const getAccessToken = async () => {
           headers: { Authorization: getBase64Encoding() },
         }
       );
-      console.log(data);
 
       process.env.BEARER_TOKEN = data.access_token;
       process.env.REFRESH_TOKEN = data.refresh_token;
+      return { access_token: data.access_token, refresh_token: data.refresh_token };
     } else throw new Error("Invalid credentials");
   } catch (err) {
-    console.log("GET_ACCESS_TOKEN", err?.response?.data);
+    console.log("GET_ACCESS_TOKEN", err);
+    return null;
   }
 };
 

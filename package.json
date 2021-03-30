@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/start.js",
     "test": "echo 'Testing'",
-    "build": "tsc"
+    "build": "tsc",
+    "auth": "ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",
